@@ -1,0 +1,191 @@
+/* ================= GLOBAL ================= */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #f3f6fb, #e9eef5);
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    height: 100vh;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* RIGHT PANEL (CHART) */
+.right-panel {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: #fafbfc;
+    padding: 30px;
+    border-left: 1px solid #ddd;
+}
+
+.right-panel h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ================= DASHBOARD CARD ================= */
+.container {
+    background: white;
+    padding: 25px 30px;
+    width: 460px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.logout-btn {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #d32f2f;
+}
+
+/* ================= FORM ================= */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.inputs input {
+    flex: 1;
+    padding: 9px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 11px;
+    background: linear-gradient(135deg, #4CAF50, #43a047);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* ================= TOTAL ================= */
+.total {
+    font-weight: bold;
+    margin: 18px 0;
+}
+
+/* ================= LIST ================= */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.badge {
+    margin-left: 8px;
+    padding: 3px 9px;
+    font-size: 12px;
+    border-radius: 12px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.delete-btn {
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ================= AUTH PAGES ================= */
+/* Applies ONLY when dashboard is NOT present */
+body:not(:has(.dashboard)) {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body:not(:has(.dashboard)) .container {
+    width: 360px;
+    text-align: center;
+}
+
+/* AUTH INPUTS */
+body:not(:has(.dashboard)) .container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* AUTH BUTTON */
+body:not(:has(.dashboard)) .container button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #4CAF50, #43a047);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* AUTH TEXT */
+body:not(:has(.dashboard)) .container p {
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+body:not(:has(.dashboard)) .container a {
+    color: #1976d2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body:not(:has(.dashboard)) .container a:hover {
+    text-decoration: underline;
+}
