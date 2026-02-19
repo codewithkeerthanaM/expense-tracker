@@ -3,7 +3,7 @@ const token = localStorage.getItem("token");
 
 let chart;
 
-// 🔒 Protect page
+// Protect page
 if (!token) {
   window.location.href = "login.html";
 }
